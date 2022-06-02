@@ -23,7 +23,8 @@ function NavBar() {
                     </ul>
                 </div>
                 <div>
-                <CartWidget />
+                    <label id="lblCarrito"></label>
+                    <CartWidget />
                 </div>
             </div>
         </nav>
