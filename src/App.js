@@ -1,9 +1,8 @@
-import './App.css';
 import Navbar from "./components/Encabezado/Navbar.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemListContainer from './components/Cuerpo/ItemListContainer';
+import ItemListContainer from './components/Cuerpo/ItemListContainer/ItemListContainer';
 
-const mensaje = "Bienvenido al mundo React"
+const mensaje = "Persianas enrollables"
 
 function App() {
   return (
