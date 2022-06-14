@@ -1,4 +1,4 @@
-import ItemList from "../ItemList"
+import ItemList from "./ListarProductos/ItemList"
 import './ItemListContainer.css'
 
 const ItemListContainer = ({ message }) => {

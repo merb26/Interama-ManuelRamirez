@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { getFetch } from "../Apis/getFetch"
-import Item from "./Item"
+import { getFetch } from "../../../Apis/getFetch"
+import Item from "../VistaProducto/Item"
 
 const ItemList = () => {
 
