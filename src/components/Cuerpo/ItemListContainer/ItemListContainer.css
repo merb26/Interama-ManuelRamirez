@@ -1,3 +1,7 @@
+.itemListContainer {
+  background-color: #ac8d6e;
+}
+
 .titulo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,7 +9,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 50px;
+  padding-top: 50px;
   margin-bottom: 50px;
+  color: aliceblue;
 }
 /*# sourceMappingURL=ItemListContainer.css.map */

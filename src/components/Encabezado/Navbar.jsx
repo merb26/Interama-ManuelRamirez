@@ -1,4 +1,7 @@
 import CartWidget from './CartWidget';
+
+import { Link } from 'react-router-dom';
+
 import './Navbar.css';
 
 function NavBar() {
@@ -12,13 +15,24 @@ function NavBar() {
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-light bg-success boton" aria-current="page" href="#n">Enrollables</a>
+                            <Link to="/">
+                                <button className="btn btn-outline-success boton shadow-none" >Inicio</button>
+                            </Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-success boton" href="#n">Plisadas y Horizontales</a>
+                            <Link to="/categoria/Enrollable">
+                                <button className="btn btn-outline-success boton shadow-none" >Enrollables</button>
+                            </Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-success boton" href="#n">Romanas y Verticales</a>
+                            <Link to="/categoria/Plisada y horizontal">
+                                <button className="btn btn-outline-success boton shadow-none">Plisadas y Horizontales</button>
+                            </Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/categoria/Romana y vertical">
+                                <button className="btn btn-outline-success boton shadow-none">Romanas y Verticales</button>
+                            </Link>
                         </li>
                     </ul>
                 </div>

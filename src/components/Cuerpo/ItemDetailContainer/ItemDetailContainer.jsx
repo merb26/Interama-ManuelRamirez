@@ -1,11 +1,16 @@
+import { useParams } from "react-router-dom"
 import { ItemDetail } from "./VistaProductoDetail/ItemDetail"
+import "./ItemDetailContainer.css"
 
 const ItemDetailContainer = ({ message }) => {
 
+  const { id } = useParams()
   return (
-    <div>
+    <div className="detailContainer">
       <h2 className="titulo">{message}</h2>
-      <ItemDetail />
+      <div className="container">
+        <ItemDetail id={id} />
+      </div>
     </div>
   )
 }

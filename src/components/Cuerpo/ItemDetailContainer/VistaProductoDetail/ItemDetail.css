@@ -1,11 +1,4 @@
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important;
-  margin: 15px;
-  background-color: aqua !important;
+.texto {
+  color: aliceblue;
 }
 /*# sourceMappingURL=ItemDetail.css.map */
