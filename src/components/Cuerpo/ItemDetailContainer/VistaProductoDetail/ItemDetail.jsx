@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { getFetchUnProducto } from "../../../Apis/getFetch"
+import ItemCount from "./ContadorCarrito/ItemCount";
 import "./ItemDetail.css"
 
 export const ItemDetail = ({ id }) => {
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
-
+    const [intercambiar, setIntercambiar] = useState(true)
 
     useEffect(() => {
         getFetchUnProducto(id)
@@ -13,6 +15,10 @@ export const ItemDetail = ({ id }) => {
             .finally(() => setCargando(false))
     }, [])
 
+    const onAdd = (cantidad) => {
+        console.log(cantidad)
+        setIntercambiar(false)
+    }
 
     return (
         <>
@@ -29,6 +35,18 @@ export const ItemDetail = ({ id }) => {
                             <h4>Categoría: </h4>{producto.categoria}
                             <h4>Precio: </h4>${producto.precio}
                             <h4>Descripción: </h4>{producto.descripcion}
+                            {
+                                intercambiar ?
+                                    <div className="contador">
+                                        <ItemCount inventario={producto.stock} inicial={1} onAdd={onAdd} />
+                                    </div>
+                                    :
+                                    <div className="contador">
+                                        <Link to={"/"}><button className="btnC">Seguir comprando</button></Link>
+                                        <Link to={"/cart"}><button className="btnC">Terminar la compra</button></Link>
+                                    </div>
+                            }
+
                         </div>
                     </div>
             }
