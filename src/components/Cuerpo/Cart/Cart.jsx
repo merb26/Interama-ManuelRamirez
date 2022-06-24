@@ -1,7 +1,61 @@
+import { useState } from "react"
+import { useApp } from "../../Apis/CartContext"
+import "./Cart.css"
 
 const Cart = () => {
+  const { cart, eliminandoProducto, limpiandoCarrito } = useApp()
+  const [actualizar, setActualizar] = useState(false)
+
+  function eliminar(id) {
+    eliminandoProducto(id)
+    actualizar === false ? setActualizar(true) : setActualizar(false)
+  }
+
+  function limpiar() {
+    limpiandoCarrito()
+  }
+  
   return (
-    <div>Cart</div>
+    <div className="cartContainer" id="cartContainer">
+      <h2 className="titulo">Carrito</h2>
+      <div className="text-center">
+        {
+
+          cart.map(
+            producto =>
+              <div className="text-center productoAgregado" key={producto.id}>
+                <div className="card m-4">
+                  <div className="card-body">
+                    <div className="row">
+                      <div className="col-6">
+                        <img src={producto.fotoUrl} className="w-75" />
+                      </div>
+                      <div className="col-6 informacion">
+                        <div className="m-1">
+                          {producto.nombre}
+                        </div>
+                        <div className="m-1">
+                          Subtotal: ${producto.precio}
+                        </div>
+                        <div className="m-1">
+                          Cantidad: {producto.cantidad}
+                        </div>
+                      </div>
+                      <div>
+                        <button onClick={(e) => eliminar(producto.id, e)}>Eliminar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          )
+        }
+        {
+          cart.length > 1 && <button className="m-3" onClick={limpiar}>Limpiar todo</button>
+        }
+      </div>
+    </div>
+
   )
 }
 

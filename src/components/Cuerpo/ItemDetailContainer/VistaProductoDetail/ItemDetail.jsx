@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getFetchUnProducto } from "../../../Apis/getFetch"
+import { useApp } from "../../../Apis/CartContext"
 import ItemCount from "./ContadorCarrito/ItemCount";
 import "./ItemDetail.css"
 
 export const ItemDetail = ({ id }) => {
+    const { agregandoProducto } = useApp() 
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
     const [intercambiar, setIntercambiar] = useState(true)
@@ -13,13 +15,13 @@ export const ItemDetail = ({ id }) => {
         getFetchUnProducto(id)
             .then(respuesta => setProducto(respuesta))
             .finally(() => setCargando(false))
-    }, [])
+    })
 
-    const onAdd = (cantidad) => {
-        console.log(cantidad)
+    const onAdd = (num) => {
+        agregandoProducto({...producto, cantidad: num})
         setIntercambiar(false)
     }
-
+    
     return (
         <>
             {

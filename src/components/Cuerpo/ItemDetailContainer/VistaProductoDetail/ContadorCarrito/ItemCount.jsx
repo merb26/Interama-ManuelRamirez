@@ -14,6 +14,7 @@ const ItemCount = ({ inventario, inicial, onAdd }) => {
     
     function btnDecremento() {
         contador > 0 ? setContador(contador - 1) : alert("Ha llegado al 0")
+        console.log("leyendo");
     }
 
     return (

@@ -1,0 +1,15 @@
+.cartContainer {
+    background-color: rgb(172, 141, 110);
+    min-height: 800px !important;
+}
+
+.productoAgregado {
+    display: flex;
+    justify-content: center;
+}
+
+.informacion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

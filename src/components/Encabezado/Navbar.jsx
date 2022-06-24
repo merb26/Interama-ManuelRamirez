@@ -38,7 +38,9 @@ function NavBar() {
                 </div>
                 <div>
                     <label id="lblCarrito"></label>
-                    <CartWidget />
+                    <Link to={"/cart"}>
+                        <CartWidget />
+                    </Link>
                 </div>
             </div>
         </nav>
