@@ -4,7 +4,6 @@ const ItemCount = ({ inventario, inicial, onAdd }) => {
     const [contador, setContador] = useState(parseInt(inicial))
 
     function btnAgregarAlCarrito() {
-        // document.querySelector("#lblCarrito").innerHTML = `<h5>${contador}</h5>`
         onAdd(contador)
     }
     
@@ -14,7 +13,6 @@ const ItemCount = ({ inventario, inicial, onAdd }) => {
     
     function btnDecremento() {
         contador > 0 ? setContador(contador - 1) : alert("Ha llegado al 0")
-        console.log("leyendo");
     }
 
     return (

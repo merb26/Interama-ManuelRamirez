@@ -1,9 +1,10 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { useApp } from "../../Apis/CartContext"
 import "./Cart.css"
 
 const Cart = () => {
-  const { cart, eliminandoProducto, limpiandoCarrito } = useApp()
+  const { cart, eliminandoProducto, limpiandoCarrito, total } = useApp()
   const [actualizar, setActualizar] = useState(false)
 
   function eliminar(id) {
@@ -14,13 +15,18 @@ const Cart = () => {
   function limpiar() {
     limpiandoCarrito()
   }
-  
+
   return (
     <div className="cartContainer" id="cartContainer">
       <h2 className="titulo">Carrito</h2>
       <div className="text-center">
         {
-
+          cart.length === 0 && <h4 className="titulo p-5">No hay productos agregados</h4>
+        }
+        {
+          cart.length === 0 && <Link to="/"><button>Buscar productos</button></Link>
+        }
+        {
           cart.map(
             producto =>
               <div className="text-center productoAgregado" key={producto.id}>
@@ -40,6 +46,9 @@ const Cart = () => {
                         <div className="m-1">
                           Cantidad: {producto.cantidad}
                         </div>
+                        <div className="m-1">
+                          Subtotal: ${producto.cantidad * producto.precio}
+                        </div>
                       </div>
                       <div>
                         <button onClick={(e) => eliminar(producto.id, e)}>Eliminar</button>
@@ -52,6 +61,9 @@ const Cart = () => {
         }
         {
           cart.length > 1 && <button className="m-3" onClick={limpiar}>Limpiar todo</button>
+        }
+        {
+          cart.length > 0 && <h2 className="titulo p-5">Total: ${total()}</h2>
         }
       </div>
     </div>
