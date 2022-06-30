@@ -1,5 +1,5 @@
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore/lite"
 import { useEffect, useState } from "react"
-import { getFetch } from "../../../Apis/getFetch"
 import Item from "../VistaProducto/Item"
 import './ItemList.css'
 
@@ -10,33 +10,17 @@ const ItemList = ({ categoria }) => {
 
     useEffect(() => {
         setCargando(true)
-        if (categoria) {
-            getFetch()
-                .then(
-                    resp => {
-                        setProductos(resp.filter(
-                            producto => producto.categoria === categoria
-                        ))
-                    }
+        setTimeout(() => {
+            const db = getFirestore()
+            const queryProd = !categoria ? collection(db, 'productos')
+                : query(collection(db, 'productos'), where('categoria', '==', categoria))
+            getDocs(queryProd)
+                .then(resp => setProductos(
+                    resp.docs.map(prod => ({ id: prod.id, ...prod.data() }))
                 )
-                .finally(
-                    () => setCargando(false)
                 )
-
-        } else {
-
-            getFetch()
-                .then(
-                    resp => {
-                        setProductos(resp)
-                    }
-                )
-                .finally(
-                    () => setCargando(false)
-                )
-
-        }
-
+                .finally(() => setCargando(false))
+        }, 2000)
     }, [categoria])
 
     return (

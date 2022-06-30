@@ -50,7 +50,6 @@ const CartContext = ({ children }) => {
 
 
   useEffect(() => {
-    console.log(cantCart);
     if (cantCart === 0) {
       document.querySelector("#lblCarrito").innerHTML = `<h5></h5>`
     } else {

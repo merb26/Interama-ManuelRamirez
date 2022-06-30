@@ -1,23 +1,23 @@
 
 const productos = [
-    {
-        id: 1,
-        nombre: "Duo Wood negro 140cm x 165cm",
-        precio: 1299,
-        descripcion: "Está constituida por 2 bandas, una traslúcida y otra opaca, que se superponen entre sí, y de este modo se logra una mayor o menor luminosidad.",
-        stock: "15",
-        fotoUrl: "https://i.ibb.co/qmxFyj6/1.jpg",
-        categoria: "Enrollable"
-    },
-    {
-        id: 2,
-        nombre: "Duo Wood crema 140cm x 165cm",
-        precio: 1649,
-        descripcion: "Con su diseño funcional y estilo moderno",
-        stock: "100",
-        fotoUrl: "https://i.ibb.co/rQrSMZt/2.jpg",
-        categoria: "Enrollable"
-    },
+    // {
+    //     id: 1,
+    //     nombre: "Duo Wood negro 140cm x 165cm",
+    //     precio: 1299,
+    //     descripcion: "Está constituida por 2 bandas, una traslúcida y otra opaca, que se superponen entre sí, y de este modo se logra una mayor o menor luminosidad.",
+    //     stock: "15",
+    //     fotoUrl: "https://i.ibb.co/qmxFyj6/1.jpg",
+    //     categoria: "Enrollable"
+    // },
+    // {
+    //     id: 2,
+    //     nombre: "Duo Wood crema 140cm x 165cm",
+    //     precio: 1649,
+    //     descripcion: "Con su diseño funcional y estilo moderno",
+    //     stock: "100",
+    //     fotoUrl: "https://i.ibb.co/rQrSMZt/2.jpg",
+    //     categoria: "Enrollable"
+    // },
     {
         id: 3,
         nombre: "Translúcida blanca 100cm x 160cm",
@@ -36,24 +36,24 @@ const productos = [
         fotoUrl: "https://i.ibb.co/4jdZZk4/4.jpg",
         categoria: "Enrollable"
     },
-    {
-        id: 5,
-        nombre: "Tela chocolate 150cm x 160cm",
-        precio: 749,
-        descripcion: "Es el complemento perfecto para la decoración y ambientación de tus espacios interiores. Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
-        stock: "20",
-        fotoUrl: "https://i.ibb.co/MfYRTK7/5.jpg",
-        categoria: "Plisada y horizontal"
-    },
-    {
-        id: 6,
-        nombre: "Tela vino 100cm x 120cm",
-        precio: 459,
-        descripcion: "Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
-        stock: "100",
-        fotoUrl: "https://i.ibb.co/48m90yz/6.jpg",
-        categoria: "Plisada y horizontal"
-    },
+    // {
+    //     id: 5,
+    //     nombre: "Tela chocolate 150cm x 160cm",
+    //     precio: 749,
+    //     descripcion: "Es el complemento perfecto para la decoración y ambientación de tus espacios interiores. Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
+    //     stock: "20",
+    //     fotoUrl: "https://i.ibb.co/MfYRTK7/5.jpg",
+    //     categoria: "Plisada y horizontal"
+    // },
+    // {
+    //     id: 6,
+    //     nombre: "Tela vino 100cm x 120cm",
+    //     precio: 459,
+    //     descripcion: "Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
+    //     stock: "100",
+    //     fotoUrl: "https://i.ibb.co/48m90yz/6.jpg",
+    //     categoria: "Plisada y horizontal"
+    // },
     {
         id: 7,
         nombre: "Imitación madera chocolate 120cm x 160cm",
@@ -72,24 +72,25 @@ const productos = [
         fotoUrl: "https://i.ibb.co/6BTqMFY/8.jpg",
         categoria: "Plisada y horizontal"
     },
-    {
-        id: 9,
-        nombre: "PVC imitación madera 200cm x 220cm",
-        precio: 2289,
-        descripcion: "Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
-        stock: "4",
-        fotoUrl: "https://i.ibb.co/ZVH6Ryq/9.jpg",
-        categoria: "Romana y vertical"
-    },
-    {
-        id: 10,
-        nombre: "Blackout lino 120cm x 250cm",
-        precio: 1299,
-        descripcion: "Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
-        stock: "16",
-        fotoUrl: "https://i.ibb.co/nQBqF39/10.jpg",
-        categoria: "Romana y vertical"
-    },
+    // {
+    //     id: 9,
+    //     nombre: "PVC imitación madera 200cm x 220cm",
+    //     precio: 2289,
+    //     descripcion: "Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
+    //     stock: "4",
+    //     fotoUrl: "https://i.ibb.co/ZVH6Ryq/9.jpg",
+    //     categoria: "Romana y vertical"
+    // },
+    // {
+    //     id: 10,
+    //     nombre: "Blackout lino 120cm x 250cm",
+    //     precio: 1299,
+    //     descripcion: "Esto se debe a que tiene un diseño de material y un mecanismo de apertura práctico que te entregan funcionalidad y estilo para tu hogar.",
+    //     stock: "16",
+    //     fotoUrl: "https://i.ibb.co/nQBqF39/10.jpg",
+    //     categoria: "Romana y vertical"
+    // },
+    
     {
         id: 11,
         nombre: "PVC marfil 200cm x 220cm",

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const ItemCount = ({ inventario, inicial, onAdd }) => {
-    const [contador, setContador] = useState(parseInt(inicial))
+    const [contador, setContador] = useState(inicial)
 
     function btnAgregarAlCarrito() {
         onAdd(contador)
