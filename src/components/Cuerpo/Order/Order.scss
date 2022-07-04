@@ -1,21 +1,27 @@
-.cartContainer {
+.orderContainer {
     background-color: rgb(172, 141, 110);
-    min-height: 800px !important;
+    min-height: 800px;
 }
 
-.productoAgregado {
+.width {
+    max-width: 300px;
+}
+
+.center {
     display: flex;
     justify-content: center;
 }
 
-.message {
+.style {
     display: flex;
     justify-content: center;
     color: aliceblue;
+    font-size: 25px;
 }
 
-.informacion {
+.btnStyle {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    color: aliceblue;
+    margin-top: 100px;
 }

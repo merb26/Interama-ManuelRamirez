@@ -6,30 +6,30 @@ import './Navbar.css';
 
 function NavBar() {
     return (
-        <nav class="navbar navbar-light navbar-expand-md bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand text-dark" href="#m">Interama</a>
-                <button class="navbar-toggler justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <nav className="sticky-top navbar navbar-light navbar-expand-md bg-light">
+            <div className="container-fluid">
+                <Link to="/"><a className="navbar-brand text-dark">Interama</a></Link>
+                <button className="navbar-toggler justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
+                <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
                             <Link to="/">
                                 <button className="btn btn-outline-success boton shadow-none" >Inicio</button>
                             </Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to="/categoria/Enrollable">
                                 <button className="btn btn-outline-success boton shadow-none" >Enrollables</button>
                             </Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to="/categoria/Plisada y horizontal">
                                 <button className="btn btn-outline-success boton shadow-none">Plisadas y Horizontales</button>
                             </Link>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <Link to="/categoria/Romana y vertical">
                                 <button className="btn btn-outline-success boton shadow-none">Romanas y Verticales</button>
                             </Link>

@@ -1,9 +1,13 @@
-.cartContainer {
+.orderContainer {
   background-color: #ac8d6e;
-  min-height: 800px !important;
+  min-height: 800px;
 }
 
-.productoAgregado {
+.width {
+  max-width: 300px;
+}
+
+.center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,7 +16,7 @@
           justify-content: center;
 }
 
-.message {
+.style {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,18 +24,17 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: aliceblue;
+  font-size: 25px;
 }
 
-.informacion {
+.btnStyle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  color: aliceblue;
+  margin-top: 100px;
 }
-/*# sourceMappingURL=Cart.css.map */
+/*# sourceMappingURL=Order.css.map */

@@ -27,9 +27,11 @@ const ItemList = ({ categoria }) => {
         <>
             {
                 cargando ?
-                    <h2 className="cargando">Cargando...</h2>
+                    <div className="mt-5 center">
+                        <img src="https://i.ibb.co/j6Cv23v/YlWC.gif" alt="YlWC" border="0"/>
+                    </div>
                     :
-                    <div className="row">
+                    <div className="row center">
                         {
                             productos.map(
                                 (producto) =>

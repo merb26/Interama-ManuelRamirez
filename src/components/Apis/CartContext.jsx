@@ -47,8 +47,6 @@ const CartContext = ({ children }) => {
     return total
   }
 
-
-
   useEffect(() => {
     if (cantCart === 0) {
       document.querySelector("#lblCarrito").innerHTML = `<h5></h5>`

@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+
 import { useApp } from "../../Apis/CartContext"
+
 import "./Cart.css"
 
 const Cart = () => {
@@ -21,7 +23,7 @@ const Cart = () => {
       <h2 className="titulo">Carrito</h2>
       <div className="text-center">
         {
-          cart.length === 0 && <h4 className="titulo p-5">No hay productos agregados</h4>
+          cart.length === 0 && <h4 className="message p-5">No hay productos agregados</h4>
         }
         {
           cart.length === 0 && <Link to="/"><button>Buscar productos</button></Link>
@@ -41,7 +43,7 @@ const Cart = () => {
                           {producto.nombre}
                         </div>
                         <div className="m-1">
-                          Subtotal: ${producto.precio}
+                          Precio: ${producto.precio}
                         </div>
                         <div className="m-1">
                           Cantidad: {producto.cantidad}
@@ -64,6 +66,9 @@ const Cart = () => {
         }
         {
           cart.length > 0 && <h2 className="titulo p-5">Total: ${total()}</h2>
+        }
+        {
+          cart.length > 0 && <Link to="/order"><button className="m-3">Finalizar compra</button></Link>
         }
       </div>
     </div>
