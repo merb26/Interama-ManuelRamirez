@@ -1,13 +1,15 @@
-import { useState } from "react";
-import { useApp } from "../../Apis/CartContext";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { Link } from "react-router-dom";
+import { useState } from "react"
+import { getFirestore, collection, addDoc } from "firebase/firestore"
+import { Link } from "react-router-dom"
+
+import { useApp } from "../../Apis/CartContext"
+
 import "./Order.css"
 
 const Form = () => {
-    const { cart, total, limpiandoCarrito } = useApp()
+    const { cart, total, cleaningCart } = useApp()
     const [id, setId] = useState("");
-    const [datosUsuario, setDatosUsuario] = useState({
+    const [userData, setUserData] = useState({
         nombre: '',
         apellido: '',
         email: '',
@@ -15,17 +17,19 @@ const Form = () => {
     });
 
     const handleInputChange = (e) => {
-        setDatosUsuario({ ...datosUsuario, [e.target.name]: e.target.value });
+        setUserData({ ...userData, [e.target.name]: e.target.value });
     };
 
-    const pedido = {
-        cliente: datosUsuario,
+    let date = new Date()
+    const order = {
+        cliente: userData,
         productos: cart,
-        total: total()
+        total: total(),
+        fecha: date.toLocaleDateString()
     }
 
     const confirmOrder = (e) => {
-        const { nombre, apellido, email, tel } = datosUsuario
+        const { nombre, apellido, email, tel } = userData
         if (
             nombre.length < 2 ||
             apellido.length < 2 ||
@@ -39,7 +43,7 @@ const Form = () => {
         e.preventDefault();
         const db = getFirestore();
         const orderCollection = collection(db, "orders");
-        const query = addDoc(orderCollection, pedido);
+        const query = addDoc(orderCollection, order);
         query
             .then(({ id }) => {
                 setId(id);
@@ -47,7 +51,7 @@ const Form = () => {
             .catch(() => {
                 console.log("error");
             })
-        limpiandoCarrito()
+        cleaningCart()
     }
 
     if (id === "") {
@@ -55,7 +59,7 @@ const Form = () => {
             <>
                 <div className="orderContainer center">
                     <form className="width text-center">
-                        <h2 className="titulo">Ingresa tus datos</h2>
+                        <h2 className="title">Ingresa tus datos</h2>
                         <div className="form-floating mb-3 p-1 m-1">
                             <input onChange={handleInputChange} type="text" className="form-control" id="floatingInput" name="nombre" placeholder="Nombre" required />
                             <label for="floatingInput">Nombre</label>
@@ -76,18 +80,18 @@ const Form = () => {
                     </form>
                 </div>
             </>
-        );
+        )
     } else {
         return (
             <div className="orderContainer">
-                <h2 className="titulo">¡Gracias por tu compra!</h2>
-                <p className="style">El pedido se ha realizado con éxito, el ID de tu compra es {id}</p>
+                <h2 className="title">¡Gracias por tu compra!</h2>
+                <p className="style">El order se ha realizado con éxito, el ID de tu compra es {id}</p>
                 <Link className="btnStyle" to={`/`}>
                     <button className="center" >← Volver a la tienda</button>
                 </Link>
             </div>
-        );
-    };
-};
+        )
+    }
+}
 
 export default Form;

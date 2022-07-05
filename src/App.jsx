@@ -6,11 +6,7 @@ import Order from "./components/Cuerpo/Order/Order";
 import CartContext from "./components/Apis/CartContext.jsx";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-const mensaje = "Persianas"
-const mensaje2 = "Producto Detallado"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
@@ -18,9 +14,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route index path="/" element={<ItemListContainer message={mensaje} />} />
+          <Route index path="/" element={<ItemListContainer message={"Persianas"} />} />
           <Route path="/categoria/:categoria" element={<ItemListContainer />} />
-          <Route path="/producto/:id" element={<ItemDetailContainer message={mensaje2} />} />
+          <Route path="/producto/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<Order />} />
         </Routes>

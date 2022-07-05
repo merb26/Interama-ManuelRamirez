@@ -6,54 +6,54 @@ import { useApp } from "../../Apis/CartContext"
 import "./Cart.css"
 
 const Cart = () => {
-  const { cart, eliminandoProducto, limpiandoCarrito, total } = useApp()
-  const [actualizar, setActualizar] = useState(false)
+  const { cart, removingProduct, cleaningCart, total } = useApp()
+  const [update, setUpdate] = useState(false)
 
-  function eliminar(id) {
-    eliminandoProducto(id)
-    actualizar === false ? setActualizar(true) : setActualizar(false)
+  function remove(id) {
+    removingProduct(id)
+    update === false ? setUpdate(true) : setUpdate(false)
   }
 
-  function limpiar() {
-    limpiandoCarrito()
+  function clean() {
+    cleaningCart()
   }
 
   return (
     <div className="cartContainer" id="cartContainer">
-      <h2 className="titulo">Carrito</h2>
+      <h2 className="title">Carrito</h2>
       <div className="text-center">
         {
-          cart.length === 0 && <h4 className="message p-5">No hay productos agregados</h4>
+          cart.length === 0 && <h4 className="message p-5">No hay products agregados</h4>
         }
         {
-          cart.length === 0 && <Link to="/"><button>Buscar productos</button></Link>
+          cart.length === 0 && <Link to="/"><button>Buscar products</button></Link>
         }
         {
           cart.map(
-            producto =>
-              <div className="text-center productoAgregado" key={producto.id}>
+            product =>
+              <div className="text-center addedProduct" key={product.id}>
                 <div className="card m-4">
                   <div className="card-body">
                     <div className="row">
                       <div className="col-6">
-                        <img src={producto.fotoUrl} className="w-75" />
+                        <img src={product.fotoUrl} className="w-75" />
                       </div>
-                      <div className="col-6 informacion">
+                      <div className="col-6 information">
                         <div className="m-1">
-                          {producto.nombre}
+                          {product.nombre}
                         </div>
                         <div className="m-1">
-                          Precio: ${producto.precio}
+                          Precio: ${product.precio}
                         </div>
                         <div className="m-1">
-                          Cantidad: {producto.cantidad}
+                          Cantidad: {product.cantidad}
                         </div>
                         <div className="m-1">
-                          Subtotal: ${producto.cantidad * producto.precio}
+                          Subtotal: ${product.cantidad * product.precio}
                         </div>
                       </div>
                       <div>
-                        <button onClick={(e) => eliminar(producto.id, e)}>Eliminar</button>
+                        <button onClick={(e) => remove(product.id, e)}>remove</button>
                       </div>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ const Cart = () => {
           )
         }
         {
-          cart.length > 1 && <button className="m-3" onClick={limpiar}>Limpiar todo</button>
+          cart.length > 1 && <button className="m-3" onClick={clean}>Limpia todo</button>
         }
         {
           cart.length > 0 && <h2 className="titulo p-5">Total: ${total()}</h2>

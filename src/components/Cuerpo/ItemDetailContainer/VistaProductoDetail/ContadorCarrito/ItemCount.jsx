@@ -1,29 +1,36 @@
 import { useState } from 'react'
+import { ToastContainer } from 'react-toastify'
 
+import { useApp } from '../../../../Apis/CartContext'
+
+import 'react-toastify/dist/ReactToastify.css'
 import "./ItemCount.css"
 
-const ItemCount = ({ inventario, inicial, onAdd }) => {
-    const [contador, setContador] = useState(inicial)
+const ItemCount = ({ stock, initial, onAdd }) => {
+    const { notifyError, notifySucess } = useApp()
+    const [counter, setCounter] = useState(initial)
 
-    function btnAgregarAlCarrito() {
-        onAdd(contador)
+    function btnAddToCart() {
+        onAdd(counter)
     }
 
-    function btnIncremento() {
-        contador < inventario ? setContador(contador + 1) : alert("No hay más disponible en Stock")
+    function btnIncrease() {
+        counter < stock ? setCounter(counter + 1) : notifyError("No hay más stock")
     }
 
-    function btnDecremento() {
-        contador > 0 && setContador(contador - 1)
+    function btnDecrement() {
+        counter > 0 && setCounter(counter - 1)
+        notifySucess("Fue agregado al carrito con éxito")
     }
 
     return (
         <>
-            <button onClick={btnDecremento}>-</button>
-            <span className='m-2 size'> {contador} </span>
-            <button onClick={btnIncremento}>+</button>
+            <ToastContainer />
+            <button onClick={btnDecrement}>-</button>
+            <span className='m-2 size'> {counter} </span>
+            <button onClick={btnIncrease}>+</button>
             <div className='mt-4'>
-                <button onClick={btnAgregarAlCarrito}>Agregar al carrito</button>
+                <button onClick={btnAddToCart}>Agregar al carrito</button>
             </div>
         </>
     )

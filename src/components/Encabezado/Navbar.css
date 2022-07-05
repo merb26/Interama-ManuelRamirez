@@ -1,14 +1,22 @@
-.boton {
+.btnStyle {
   margin-right: 20px !important;
   color: #ac8d6e !important;
   border-color: #ac8d6e !important;
   padding: 3px !important;
 }
 
-.boton:hover {
+.btnStyle:hover {
   background-color: white !important;
   color: #ac8d6e !important;
   border-width: 3px !important;
   border-color: #ac8d6e !important;
+}
+
+.dropdown-item {
+  color: #ac8d6e !important;
+}
+
+.dropdown-item:hover {
+  background-color: #e1d3c6 !important;
 }
 /*# sourceMappingURL=Navbar.css.map */

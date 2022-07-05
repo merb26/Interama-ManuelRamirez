@@ -1,5 +1,4 @@
-
-.boton {
+.btnStyle {
     margin-right: 20px !important;
     color: rgb(172, 141, 110) !important;
     border-color: rgb(172, 141, 110) !important;
@@ -10,5 +9,12 @@
         color: rgb(172, 141, 110) !important;
         border-width: 3px !important;
         border-color: rgb(172, 141, 110) !important;
+    }
+}
+
+.dropdown-item {
+    color: rgb(172, 141, 110) !important;
+    &:hover {
+        background-color: rgb(225, 211, 198) !important;
     }
 }

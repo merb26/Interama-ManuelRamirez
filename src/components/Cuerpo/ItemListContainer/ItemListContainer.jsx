@@ -1,6 +1,8 @@
-import ItemList from "./ListarProductos/ItemList"
-import './ItemListContainer.css'
 import { useParams } from "react-router-dom"
+
+import ItemList from "./ListarProductos/ItemList"
+
+import './ItemListContainer.css'
 
 const ItemListContainer = ({ message }) => {
 
@@ -8,9 +10,9 @@ const ItemListContainer = ({ message }) => {
 
   return (
     <div className="itemListContainer">
-      <h2 className="titulo">{categoria ? categoria : message}</h2>
+      <h2 className="title">{categoria ? categoria : message}</h2>
       <div className="container itemContainer">
-        <ItemList categoria={categoria}/>
+        <ItemList category={categoria}/>
       </div>
     </div>
   )
