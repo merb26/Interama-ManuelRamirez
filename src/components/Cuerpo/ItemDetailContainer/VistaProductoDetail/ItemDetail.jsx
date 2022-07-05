@@ -18,7 +18,7 @@ export const ItemDetail = ({ id }) => {
     useEffect(() => {
         setTimeout(() => {
             const db = getFirestore()
-            const queryProd = doc(db, 'products', id)
+            const queryProd = doc(db, 'productos', id)
             getDoc(queryProd)
                 .then(prod => setProduct({ id: prod.id, ...prod.data() }))
                 .finally(() => setLoading(false))
@@ -51,7 +51,7 @@ export const ItemDetail = ({ id }) => {
                             {
                                 exchange ?
                                     <div className="counter">
-                                        <ItemCount inventario={product.stock} inicial={1} onAdd={onAdd} />
+                                        <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
                                     </div>
                                     :
                                     <div className="counter">

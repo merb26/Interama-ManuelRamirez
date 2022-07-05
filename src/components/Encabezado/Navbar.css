@@ -1,11 +1,11 @@
-.btnStyle {
+.btnMenu {
   margin-right: 20px !important;
   color: #ac8d6e !important;
   border-color: #ac8d6e !important;
   padding: 3px !important;
 }
 
-.btnStyle:hover {
+.btnMenu:hover {
   background-color: white !important;
   color: #ac8d6e !important;
   border-width: 3px !important;

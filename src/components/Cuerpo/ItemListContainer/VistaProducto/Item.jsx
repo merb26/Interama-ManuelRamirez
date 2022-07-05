@@ -17,7 +17,7 @@ const Item = ({ product }) => {
                             </div>
                         </div>
                         <div className="text-center">
-                            <Link to={`/product/${product.id}`}>
+                            <Link to={`/producto/${product.id}`}>
                                 <button className="btn btn-outline-secondary m-2 mt-4">
                                     Más detalle
                                 </button>

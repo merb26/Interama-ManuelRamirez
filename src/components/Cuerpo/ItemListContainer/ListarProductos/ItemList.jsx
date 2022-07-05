@@ -14,7 +14,7 @@ const ItemList = ({ category }) => {
         setTimeout(() => {
             const db = getFirestore()
             const queryProd = !category ? collection(db, 'productos')
-                : query(collection(db, 'productos'), where('category', '==', category))
+                : query(collection(db, 'productos'), where('categoria', '==', category))
             getDocs(queryProd)
                 .then(resp => setProducts(
                     resp.docs.map(prod => ({ id: prod.id, ...prod.data() }))

@@ -23,10 +23,10 @@ const Cart = () => {
       <h2 className="title">Carrito</h2>
       <div className="text-center">
         {
-          cart.length === 0 && <h4 className="message p-5">No hay products agregados</h4>
+          cart.length === 0 && <h4 className="message p-5">No hay productos agregados</h4>
         }
         {
-          cart.length === 0 && <Link to="/"><button>Buscar products</button></Link>
+          cart.length === 0 && <Link to="/"><button>Buscar productos</button></Link>
         }
         {
           cart.map(
@@ -53,7 +53,7 @@ const Cart = () => {
                         </div>
                       </div>
                       <div>
-                        <button onClick={(e) => remove(product.id, e)}>remove</button>
+                        <button onClick={(e) => remove(product.id, e)}>Eliminar</button>
                       </div>
                     </div>
                   </div>
@@ -65,7 +65,7 @@ const Cart = () => {
           cart.length > 1 && <button className="m-3" onClick={clean}>Limpia todo</button>
         }
         {
-          cart.length > 0 && <h2 className="titulo p-5">Total: ${total()}</h2>
+          cart.length > 0 && <h2 className="title p-5">Total: ${total()}</h2>
         }
         {
           cart.length > 0 && <Link to="/order"><button className="m-3">Finalizar compra</button></Link>
