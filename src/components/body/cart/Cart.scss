@@ -1,0 +1,21 @@
+.cartContainer {
+    background-color: rgb(172, 141, 110);
+    min-height: 800px !important;
+}
+
+.addedProduct {
+    display: flex;
+    justify-content: center;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -1,0 +1,28 @@
+.orderContainer {
+    background-color: rgb(172, 141, 110);
+    min-height: 800px;
+}
+
+.width {
+    max-width: 300px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.style {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.btnStyle {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    margin-top: 100px;
+    text-decoration: none;
+}

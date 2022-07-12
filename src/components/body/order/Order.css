@@ -1,0 +1,41 @@
+.orderContainer {
+  background-color: #ac8d6e;
+  min-height: 800px;
+}
+
+.width {
+  max-width: 300px;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: aliceblue;
+  font-size: 25px;
+}
+
+.btnStyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: aliceblue;
+  margin-top: 100px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=Order.css.map */
