@@ -30,7 +30,7 @@ El proyecto se trata de seguir las consignas del curso para completar un e-comme
 
 ## Demo
 
-![Gif](https://github.com/merb26/Interama-ManuelRamirez/tree/master/public/proyecto-final-React-Js.gif?raw=true)
+![Gif](https://github.com/merb26/Interama-ManuelRamirez/blob/master/public/proyecto-final-React-Js.gif)
 
 Link 👉 - https://zesty-bavarois-8e1ae1.netlify.app/
 
