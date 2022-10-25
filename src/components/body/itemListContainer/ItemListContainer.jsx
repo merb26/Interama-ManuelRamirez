@@ -12,7 +12,7 @@ const ItemListContainer = ({ message }) => {
     <div className="itemListContainer">
       <h2 className="title">{categoria ? categoria : message}</h2>
       <div className="container itemContainer">
-        <ItemList category={categoria}/>
+        <ItemList category={categoria} />
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore/lite"
 import { useEffect, useState } from "react"
 
-import Item from "./item/Item"
+import { Item } from "./item/Item"
 
 
 const ItemList = ({ category }) => {
@@ -29,14 +29,16 @@ const ItemList = ({ category }) => {
             {
                 loading ?
                     <div className="mt-5 center">
-                        <img src="https://i.ibb.co/j6Cv23v/YlWC.gif" alt="YlWC" border="0"/>
+                        <img src="https://i.ibb.co/j6Cv23v/YlWC.gif" alt="YlWC" border="0" />
                     </div>
                     :
+
                     <div className="row center">
                         {
+
                             products.map(
                                 (product) =>
-                                    <Item product={product} />
+                                    <Item product={product} category={category} />
                             )
                         }
                     </div>

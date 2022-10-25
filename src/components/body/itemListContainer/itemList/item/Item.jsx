@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom"
 
-const Item = ({ product }) => {
+export const Item = ({ product, category }) => {
+
+    const isOneCategory = category => {
+
+        if (category !== undefined) {
+            return <img src={`.${product.fotoUrl}`} className="w-100" alt="" />
+        }
+
+        return <img src={`${product.fotoUrl}`} className="w-100" alt="" />
+    }
 
     return (
         <>
             <div className="col-lg-3 col-md-5 mb-4 text-center" key={product.id}>
                 <div className="card">
                     <div className="card-body">
-                        <img src={product.fotoUrl} className="w-100" alt=""/>
+                        {
+                            isOneCategory(category)
+                        }
                     </div>
                     <div className="card-footer">
                         <div className="m-3">
@@ -29,5 +40,3 @@ const Item = ({ product }) => {
         </>
     )
 }
-
-export default Item
