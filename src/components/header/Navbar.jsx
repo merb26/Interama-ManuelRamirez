@@ -8,7 +8,7 @@ function NavBar() {
     return (
         <nav className="sticky-top navbar navbar-light navbar-expand-lg bg-light">
             <div className="container-fluid">
-                <Link to="/Index.html">
+                <Link to="/">
                     <img src="https://i.ibb.co/2t97zXj/titulo.png" alt="titulo" border="0" height="25%" width="200px" />
                 </Link>
                 <button className="navbar-toggler justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@ function NavBar() {
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/Index.html">
+                            <Link to="/">
                                 <button className="btn btn-outline-success btnMenu shadow-none" >Inicio</button>
                             </Link>
                         </li>

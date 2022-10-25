@@ -55,7 +55,7 @@ export const ItemDetail = ({ id }) => {
                                     </div>
                                     :
                                     <div className="counter">
-                                        <Link to={"/Index.html"}><button className="btnC">Seguir comprando</button></Link>
+                                        <Link to={"/"}><button className="btnC">Seguir comprando</button></Link>
                                         <Link to={"/cart"}><button className="btnC">Terminar la compra</button></Link>
                                     </div>
                             }

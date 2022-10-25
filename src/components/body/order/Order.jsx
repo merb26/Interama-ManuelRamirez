@@ -88,7 +88,7 @@ const Form = () => {
             <div className="orderContainer">
                 <h2 className="title" >¡Gracias por tu compra!</h2>
                 <p className="style">El order se ha realizado con éxito, el ID de tu compra es {id}</p>
-                <Link className="btnStyle" to={`/Index.html`}>
+                <Link className="btnStyle" to={`/`}>
                     <button className="center" >← Volver a la tienda</button>
                 </Link>
             </div>

@@ -27,7 +27,7 @@ const Cart = () => {
           cart.length === 0 && <h4 className="message p-5">No hay productos agregados</h4>
         }
         {
-          cart.length === 0 && <Link to="/Index.html"><button>Buscar productos</button></Link>
+          cart.length === 0 && <Link to="/"><button>Buscar productos</button></Link>
         }
         {
           cart.map(
