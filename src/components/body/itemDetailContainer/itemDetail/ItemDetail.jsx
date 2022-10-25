@@ -41,7 +41,7 @@ export const ItemDetail = ({ id }) => {
                     :
                     <div className="row">
                         <div className="text-center col-md-6">
-                            <img src={product.fotoUrl} alt="" className="w-100 p-5" />
+                            <img src={`.${product.fotoUrl}`} alt="" className="w-100 p-5" />
                         </div>
                         <div className="col-md-6 pt-5 text">
                             <h4>Nombre: </h4><div className="mb-4">{product.nombre}</div>
@@ -55,7 +55,7 @@ export const ItemDetail = ({ id }) => {
                                     </div>
                                     :
                                     <div className="counter">
-                                        <Link to={"/"}><button className="btnC">Seguir comprando</button></Link>
+                                        <Link to={"/Index.html"}><button className="btnC">Seguir comprando</button></Link>
                                         <Link to={"/cart"}><button className="btnC">Terminar la compra</button></Link>
                                     </div>
                             }
